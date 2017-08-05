@@ -9,21 +9,21 @@
 	<form>
 		<fieldset>
 			Temperature:<br>
-	  		<input id="temp" type="number" placeholder="temperature" name="temp"><br>
+	  		<input id="originalTemp" type="text" placeholder="temperature" name="temp"><br>
 
   			Measurement:<br>
-	  		<input class = celOrFahrChecked id="cel" type="radio" name="temperature" value="Celsius"> Celsius<br>
-	  		<input class = celOrFahrChecked id="fahr" type="radio" name="temperature" value="Fahrenheit"> Fahrenheit<br>
+	  		<input class = celOrFahrChecked id="celButton" type="radio" name="temperature" value="Celsius"> Fahrenheit to Celsius<br>
+	  		<input class = celOrFahrChecked id="fahr" type="radio" name="temperature" value="Fahrenheit"> Celsius to Fahrenheit<br>
 		
 
-		<div>
+		<div id="poopOutput">
 			<p>
 				"This is poop"
 			</p>
 		</div>
 		
 		
-				<input id="submit" type="submit" value="Submit">
+				<input id="submitButton" type="button" value="Submit">
 				<input type="reset" value="Reset">
 		</fieldset>
 	</form>
