@@ -1,58 +1,90 @@
+//univeral variable
+
+var origNumberEntered = document.getElementById("originalTemp");
+
+//what was entered in the text area//
+
+// var whichChecked = celOrFahrChecked
+
+var element = document.getElementById("submitButton");
+element.addEventListener("click", tempInput );
 
 
 
-function fahrenheit(ftemp) {
-	var ftemp = document.getElementById("temp").innerHTML;
-	ftemp = (ftemp * 1.8 ) + 32;
+function tempInput() {
+	var inputText = parseInt(origNumberEntered.value);
 	
+	// console.log("origNumberEntered:", inputText);
+	
+
+	if (document.getElementById("fahr").checked) {
+	var gatherInput = fahrenheit(inputText);
+	domWriter(gatherInput, "f");
+	}
+	
+	 else if (document.getElementById("celButton").checked) {
+		// var inputText = gatherInput;
+		var gatherInput = celsius(inputText);
+		domWriter(gatherInput, "c");
+	} else {
+		"This is shit";
+	}
+
+
+	}
+
+function fahrenheit(farTemp) {
+	var ftemp = (farTemp * 1.8 ) + 32;
+	return ftemp;	
 }
 
-console.log(fahrenheit(ftemp));
-
-
-// function celcius(true) {
-// 	get div id of text area
-// 	do the math
-// }
-
-function listen() {
-	run the listener event
-	submit.addEventListener("click", console.log("temp"));
-
+function celsius(celTemp) {
+	var cel = (celTemp - 32) / 1.8;	
+	return cel;
 }
 
-// if (fahrenheit(true)) {
-// to return checked property: radioObject.checked	
-// }
-	
 
-// To clear everything out at the end:
+function domWriter(gatherInput, t) {
+	var colorHolder;
+	if (t === "f") {
+		if (gatherInput > 90) {
+				colorHolder = "high";
+				console.log(colorHolder);
+				console.log(gatherInput)
+		} else if (gatherInput <32) {
+				colorHolder = "low";
+				console.log(colorHolder);
+				console.log(gatherInput);
+		} else {
+				colorHolder = "middle";
+				console.log(colorHolder);
+				console.log(gatherInput);
+		}
+	} else {
+		if (t === "c") {
+			if (gatherInput > 32) {
+				colorHolder = "high";
+				console.log(colorHolder);
+				console.log(gatherInput)
+		} else if (gatherInput < 0) {
+				colorHolder = "low";
+				console.log(colorHolder);
+				console.log(gatherInput);
+		} else {
+				colorHolder = "middle";
+				console.log(colorHolder);
+				console.log(gatherInput);
+		}
+		}
+		var domString = "";
+		var tempContainerColor = document.getElementById("poopOutput");
+		tempContainerColor.InnerHTML;
+		
+		
+		}
 
-// function uncheck() {
-// 	document.getElementById("red").checked = false;
-// }
 
 
 
-// function check() {
-//     document.getElementByClassName("celOrFahrChecked");
-// 	radioObject.checked = true|false;
-// 	return "celOrFahrChecked";
-
-// }
-
-// // var a = document.getElementById("cel").innerHTML;
-// // console.log(a);
 
 
-
-// // function determineConverter(submit)
-// // 	document.getElementById("submit").addEventListener("click", displayDate);
-// // Try it Yourself »
-
-
-// // function toFahrenheit(temp) {
-// // 	console.log(document.getElementById(temp));
-	
-	
-// // }
