@@ -78,58 +78,39 @@ function domWriter(gatherInput, t) {
 				console.log(gatherInput);
 		}
 	}
-	var tempContainerColor = document.getElementById("poopOutput");
-		// var domString = tempContainerColor.InnerHTML
-		var domString = "";
-		// tempContainerColor.InnerHTML += DomString;
-		
+	
+		var tempContainerColor = document.getElementById("poopOutput");
 		
 		if (colorHolder === "high") {
-			tempContainerColor.InnerHTML += DomString;
-			domString +=	'<div id="poopOutput">';
-			domString += '<p id="colorRed">' + 'The converted temperature is ' + gatherInput + '</p>';
+			tempContainerColor.innerHTML += domString;
+			domString = "";
+			// domString +='<div id="poopOutput">';
+			domString += '<p id="colorRed">' + 'The converted temperature is ' + colorHolder + '</p>';
+			domString += '</div>';
+			return domStringtoDom;
+			document.write(domString);
+			console.log(tempContainerColor);
+
+
+	} 	else if (colorHolder === "middle") {
+			tempContainerColor.innerHTML += domString;
+			domString +='<div id="poopOutput">';
+			domString += '<p id="colorGreen">' + 'The converted temperature is ' + colorHolder + '</p>';
 			domString += '</div>'
 			return tempContainerColor;
 			console.log(tempContainerColor);
-	}
+		} else {
+			tempContainerColor.innerHTML += domString;
+			domString +='<div id="poopOutput">';
+			domString += '<p id="colorBlue">' + 'The converted temperature is ' + colorHolder + '</p>';
+			domString += '</div>'
+			return tempContainerColor;
+			console.log(tempContainerColor);
+		}
 }
 }
+
 		
-		
-	
-	
-		
-
-		// function passThrough(colors) {
-		// 	var domString = "";	
-
-// 		if (colorHolder === "high") {
-// 			// domString +=	'<div id="poopOutput">';
-// 			// tempContainerColor;
-// 			domString += '<section>'
-// 			domString += '<p id="colorRed">' + 'The converted temperature is ' + gatherInput + '</p>';
-// 			domString += '</section>'
-// 			domString += '</div>'
-			
-// 			return colorHolderDomString;
-// 			console.log("domString",colorHolderDomString);
-// 			tempContainerColor = colorHolderDomString;
-// 			}
-// 		else if (colorHolder === "middle") {
-// 			domString +=	'<div id="poopOutput">';
-// 			domString += '<p id="colorGreen">' + 'The converted temperature is ' + colorHolder + '</p>';
-// 			domString += '</div>'
-
-// 			return domString;
-// 		} else {
-// 			// domString +=	'<div id="poopOutput">';
-// 			domString += '<p id="colorBlue">' + 'The converted temperature is ' + colorHolder + '</p>';
-// 			domString += '</div>'
-
-// 			return domString;
-// 		}
-// 		printToDom;
-		// }
 	
 	
 		
