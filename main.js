@@ -27,7 +27,7 @@ function tempInput() {
 		var gatherInput = celsius(inputText);
 		domWriter(gatherInput, "c");
 	} else {
-		"This is shit";
+		"You need to choose a conversion";
 	}
 
 
@@ -60,7 +60,9 @@ function domWriter(gatherInput, t) {
 				console.log(colorHolder);
 				console.log(gatherInput);
 		}
-	} else {
+	} 
+
+	else {
 		if (t === "c") {
 			if (gatherInput > 32) {
 				colorHolder = "high";
@@ -75,13 +77,63 @@ function domWriter(gatherInput, t) {
 				console.log(colorHolder);
 				console.log(gatherInput);
 		}
-		}
+	}
+	var tempContainerColor = document.getElementById("poopOutput");
+		// var domString = tempContainerColor.InnerHTML
 		var domString = "";
-		var tempContainerColor = document.getElementById("poopOutput");
-		tempContainerColor.InnerHTML;
+		// tempContainerColor.InnerHTML += DomString;
 		
 		
-		}
+		if (colorHolder === "high") {
+			tempContainerColor.InnerHTML += DomString;
+			domString +=	'<div id="poopOutput">';
+			domString += '<p id="colorRed">' + 'The converted temperature is ' + gatherInput + '</p>';
+			domString += '</div>'
+			return tempContainerColor;
+			console.log(tempContainerColor);
+	}
+}
+}
+		
+		
+	
+	
+		
+
+		// function passThrough(colors) {
+		// 	var domString = "";	
+
+// 		if (colorHolder === "high") {
+// 			// domString +=	'<div id="poopOutput">';
+// 			// tempContainerColor;
+// 			domString += '<section>'
+// 			domString += '<p id="colorRed">' + 'The converted temperature is ' + gatherInput + '</p>';
+// 			domString += '</section>'
+// 			domString += '</div>'
+			
+// 			return colorHolderDomString;
+// 			console.log("domString",colorHolderDomString);
+// 			tempContainerColor = colorHolderDomString;
+// 			}
+// 		else if (colorHolder === "middle") {
+// 			domString +=	'<div id="poopOutput">';
+// 			domString += '<p id="colorGreen">' + 'The converted temperature is ' + colorHolder + '</p>';
+// 			domString += '</div>'
+
+// 			return domString;
+// 		} else {
+// 			// domString +=	'<div id="poopOutput">';
+// 			domString += '<p id="colorBlue">' + 'The converted temperature is ' + colorHolder + '</p>';
+// 			domString += '</div>'
+
+// 			return domString;
+// 		}
+// 		printToDom;
+		// }
+	
+	
+		
+		
 
 
 
