@@ -1,11 +1,11 @@
-#colorRed {
+.high {
 	color: red;
 }
 
-#colorBlue {
-	color: blue;
+.middle {
+	color: green;
 }
 
-#colorGreen {
-	color: green;
+.low {
+	color: blue;
 }
